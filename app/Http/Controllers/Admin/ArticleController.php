@@ -44,6 +44,8 @@ class ArticleController extends Controller
         $pagiData = $this->article->paginate(Input::get('page', 1), $this->perPage, true);
         $articles = Pagination::makeLengthAware($pagiData->items, $pagiData->totalItems, $this->perPage);
 
+        
+
         return view('backend.article.index', compact('articles'));
     }
 

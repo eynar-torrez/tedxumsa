@@ -258,6 +258,9 @@ Route::group(array('namespace' => 'Admin'), function () {
                                               'uses' => 'AuthController@postResetPassword', ));
 });
 
+
+Route::post('post_comentario', array('as' => 'post_comentario', 'uses' => 'ComentController@post_comentario'));
+
 /*
 |--------------------------------------------------------------------------
 | General Routes

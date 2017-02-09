@@ -43,4 +43,13 @@ class Article extends BaseModel implements ModelInterface, SluggableInterface
     {
         return 'article/'.$this->attributes['slug'];
     }
+
+    public function coments()
+    {
+        return $this->hasMany('Fully\Coment','article_id')->orderBy('created_at','desc');
+    }
+
+
 }
+
+

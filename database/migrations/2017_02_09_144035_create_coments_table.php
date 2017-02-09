@@ -16,7 +16,6 @@ class CreateComentsTable extends Migration
             $table->string('article_id', 100);
             $table->text('contenido');
             $table->string('nombre',200);
-            $table->string('correo',200);
             $table->timestamps();
         });
     }

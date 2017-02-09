@@ -43,11 +43,14 @@ class ArticleController extends Controller
     public function index(Request $request)
     {
         $pagiData = $this->article->paginate($request->get('page', 1), $this->perPage, false);
+//        $pagiData = $this->article->paginate(null, $this->perPage, false);
         $articles = Pagination::makeLengthAware($pagiData->items, $pagiData->totalItems, $this->perPage);
 
         $tags = $this->tag->all();
         $categories = $this->category->all();
 
+        /*dd($pagiData->items);
+        exit;*/
         return view('frontend.article.index', compact('articles', 'tags', 'categories'));
     }
 
@@ -71,6 +74,8 @@ class ArticleController extends Controller
 
         $categories = $this->category->all();
         $tags = $this->tag->all();
+
+        
 
         return view('frontend.article.show', compact('article', 'categories', 'tags'));
     }
