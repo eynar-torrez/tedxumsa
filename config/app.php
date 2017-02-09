@@ -156,6 +156,8 @@ return [
         Laracasts\Flash\FlashServiceProvider::class,
         Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
         Sseffa\VideoApi\VideoApiServiceProvider::class,
+        Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
+
 
     ],
     /*
@@ -217,7 +219,7 @@ return [
         'VideoApi'            => Sseffa\VideoApi\Facades\VideoApi::class,
         'Feeder'              => Fully\Feeder\Facade\Feeder::class,
         'Search'              => Fully\Search\Facade\Search::class,
-        'Flash'               => Laracasts\Flash\Flash::class
+        'Flash'               => Laracasts\Flash\Flash::class,
 
     ],
 

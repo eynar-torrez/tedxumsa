@@ -83,6 +83,7 @@
                                 <label>COMENTARIO</label><br>
                                 {!! Form::textarea('contenido') !!}<br>
                                 {!! Form::hidden('article_id',$article->id) !!}<br>
+                                {!! app('captcha')->display(); !!}
                                 {!! Form::submit('POSTEAR') !!}<br>
                                 {!! Form::close() !!}
                             </p>
